@@ -48,7 +48,7 @@ subplot1.plot(points, fit[0] * points + fit[1], color='g')
 
 plt.xlabel('Position')
 plt.ylabel('Value')
-plt.title('Scatter Plot')
+plt.title('Line Graph')
 subplot1.legend(['Data points', 'Data line', 'Mean', 'Median', 'Regression line'])
 
 # Subplot 2 - Distribution
@@ -64,7 +64,7 @@ subplot2.axhline(y = mean_fq, color='r', linestyle='--')
 
 plt.xlabel('Value')
 plt.ylabel('Frequency')
-plt.title('Distribution')
+plt.title('Distribution Plot')
 subplot2.legend(['Frequencies', 'Frequency line', 'Mode', 'Mean frequency'])
 
 print('Mean: ', mean)
