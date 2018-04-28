@@ -4,7 +4,10 @@ This project is a quantitative series tool for one-liner data visualization thro
 ![Figure](https://github.com/paubric/python-quest/blob/master/Figure_1.png)
 
 ## Introduction
-Quest can perform common descriptive statistics operations and generate a scatter plot and a distribution plot, based on an input file which contains numbers delimited by whitespace.
+Quest can perform common descriptive statistics operations and generate a scatter plot and a distribution plot, based on an input file which contains numbers delimited by whitespace. It can be used like this:
+```
+python3 main.py --file my_file.txt
+```
 
 ## Features
 ### Scatter Plot
