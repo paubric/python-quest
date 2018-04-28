@@ -2,12 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 import argparse
+import operator
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--file')
 results = parser.parse_args()
 
 data = np.loadtxt(results.file)
+print(data)
 len = len(data)
 points = range(0, len)
 # Mean
@@ -53,7 +55,8 @@ subplot1.legend(['Data points', 'Data line', 'Mean', 'Median', 'Regression line'
 subplot2 = fig.add_subplot(212)
 
 subplot2.plot(fq.keys(), fq.values(), 'bo')
-#subplot2.plot(fq.keys(), fq.values(), 'b-')
+sorted_fq = sorted(fq.items(), key=operator.itemgetter(0))
+subplot2.plot([elem[0] for elem in sorted_fq], [elem[1] for elem in sorted_fq], 'b-')
 
 subplot2.plot(mode, fq[mode], 'ro')
 mean_fq = np.mean(list(fq.values()))
