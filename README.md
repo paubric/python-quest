@@ -22,14 +22,16 @@ Standard deviation:	 2.569046515733026
 ```
 ## Features
 ### Scatter Plot
-- Generates plot
-- Calculates mean
-- Calculates median
-- Generates regression line
+- Plots data
+- Plots mean
+- Plots median
+- Plots regression line
 ### Distribution Plot
-- Generates plot
-- Calculates mode
-- Calculates mean frequency
+- Plots distribution
+- Plots mode(s)
+- Plots mean frequency
+### Numerical
+- Computes mean, median, mode, regression, range, interquintile range, variance, standard deviation, correlation
 
 ## TODO
 - <s>Mean, median, mode</s>
