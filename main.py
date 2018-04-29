@@ -8,14 +8,14 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--file')
 results = parser.parse_args()
 
-# data = np.loadtxt(results.file)
-data = np.random.randint(10, size = 10)
+data = np.loadtxt(results.file)
+#data = np.random.randint(10, size = 10)
 len = len(data)
 points = range(0, len)
 mode = []
 
 # Mean
-mean = np.mean(data)
+mean = np.sum(data) / len
 
 # Median
 if (len % 2 == 1):
@@ -45,7 +45,10 @@ if len >= 4:
 fig = plt.figure()
 
 # Var
-var = np.var(data) # TODO Self implement
+var = 0
+for i in data:
+    var += (mean - i) ** 2
+var /= len
 
 # Standard deviation
 stddev = np.sqrt(var)
